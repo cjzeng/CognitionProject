@@ -1,6 +1,6 @@
 Sub list_files()
    Dim MyObj As Object, MySource As Object, file As Variant
-   file = Dir("/Users/czeng/Downloads/cognitionproject/")
+   file = Dir("/App/Data/Downloads/cognitionproject/")
    While (file <> "")
       Debug.Print "found file=", file
       If InStr(file, ".csv") > 0 Then
