@@ -1,4 +1,5 @@
 ' Class NameLookUp
+
 Dim names(1 To 1000) As String
 Dim cur As Long
 
