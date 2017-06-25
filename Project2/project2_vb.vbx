@@ -1,0 +1,18 @@
+Sub copy_source_data_to_destination()
+    'Find header row, build source column map for name and answer - use map (key: column, value: name)
+    'Copy the header to destination and buid destination header map (key: name, value: column)
+    'Copy the awswer key to dedestination
+    'For each data row
+    ' Get the name, answer value
+
+
+End Sub
+
+
+
+
+
+
+Sub copy_source_row_to_destination()
+
+End Sub
