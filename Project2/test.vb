@@ -9,19 +9,19 @@ Sub testSourceMap()
 End Sub
 
 Sub testNameLookUp()
-    Dim lookUp As New NameLookUp
+    Dim lookup As New NameLookUp
     
-    lookUp.init
+    lookup.init
     
-    lookUp.add "name 1"
-    lookUp.add "name 2"
-    lookUp.add "name 3"
-    lookUp.add "name 4"
-    lookUp.add "name 5"
-    lookUp.add "name 6"
-    lookUp.add "name 7"
+    lookup.add "name 1"
+    lookup.add "name 2"
+    lookup.add "name 3"
+    lookup.add "name 4"
+    lookup.add "name 5"
+    lookup.add "name 6"
+    lookup.add "name 7"
     
-    Debug.Print "name 6 = ", lookUp.findNameIdx("name 6")
+    Debug.Print "name 6 = ", lookup.findNameIdx("name 6")
 End Sub
 
 Sub testDataMap()
@@ -80,22 +80,22 @@ Sub testDestMap()
     
     src.buildDataMap
     
-    Dim Dest As New Dest
+    Dim dest As New dest
     Dim oIdx As Long
     Dim i As Long
     Dim dataLength As Long
 
-    Dest.init
+    dest.init
     dataLength = src.getDataMapSize
-    Dest.buildColumnMap src.getFieldMap, dataLength
+    dest.buildColumnMap src.getFieldMap, dataLength
     
-    oIdx = Dest.getCMapOIdx()
-    For i = oIdx To Dest.getCMapSize()
-        Debug.Print "colmap ", i, "=", Dest.getColumnMapItem(i)
+    oIdx = dest.getCMapOIdx()
+    For i = oIdx To dest.getCMapSize()
+        Debug.Print "colmap ", i, "=", dest.getColumnMapItem(i)
     Next
     
     For i = 1 To dataLength
-        Debug.Print "dataMap ", i, "=", Dest.getDataMapIdx(i)
+        Debug.Print "dataMap ", i, "=", dest.getDataMapIdx(i)
     Next
     
     src.init
@@ -108,14 +108,14 @@ Sub testDestMap()
     src.buildDataMap
     
     dataLength = src.getDataMapSize
-    Dest.buildColumnMap src.getFieldMap, dataLength
+    dest.buildColumnMap src.getFieldMap, dataLength
      
-    For i = 1 To Dest.getCMapSize()
-        Debug.Print "colmap ", i, "=", Dest.getColumnMapItem(i)
+    For i = 1 To dest.getCMapSize()
+        Debug.Print "colmap ", i, "=", dest.getColumnMapItem(i)
     Next
     
     For i = 1 To dataLength
-        Debug.Print "dataMap ", i, "=", Dest.getDataMapIdx(i)
+        Debug.Print "dataMap ", i, "=", dest.getDataMapIdx(i)
     Next
     
 End Sub
