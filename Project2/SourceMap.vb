@@ -17,6 +17,7 @@ Dim fieldMap(1 To maxArraySize) As String
 
 Dim dataRows(1 To maxArraySize, 1 To maxColumnSize) As String
 Dim dRowSize As Long
+Dim section As String
 
 Sub init()
     cMax = 0
@@ -85,4 +86,16 @@ End Sub
 
 Function getDataItem(r As Long, c As Long) As String
     getDataItem = dataRows(r, c)
+End Function
+
+Function getDataItemSize() As Long
+    getDataItemSize = dRowSize
+End Function
+
+Sub setSection(sec As String)
+    section = sec
+End Sub
+
+Function getSection() As String
+    getSection = section
 End Function
